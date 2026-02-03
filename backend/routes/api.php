@@ -1,7 +1,11 @@
 <?php
 
-// use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\StudentsController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentsController;
 
-// Route::post('/student/save', [StudentsController::class, 'save']);
-// Route::get('/student/get', [StudentsController::class, 'getData']);
+Route::controller(StudentsController::class)->group(function () {
+  Route::post('/student/save', 'save');
+  Route::get('/student/get', 'getData');
+
+});

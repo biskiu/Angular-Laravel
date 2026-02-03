@@ -1,4 +1,4 @@
-POST http://127.0.0.1:8000/student/save
+POST http://127.0.0.1:8000/api/student/save
 Content-Type: application/json
 
 {
@@ -6,4 +6,5 @@ Content-Type: application/json
   "contact_no": "123"
 }
 ###
-GET http://127.0.0.1:8000/student/get
+GET http://127.0.0.1:8000/api/student/get
+# GET http://127.0.0.1:8000/student/get

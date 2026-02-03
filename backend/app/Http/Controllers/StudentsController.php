@@ -8,24 +8,20 @@ use App\Models\Students;
 
 class StudentsController extends Controller
 {
-    protected StudentsService $studentService;
-
-    public function __construct(StudentsService $studentService)
-    {
-        $this->studentService = $studentService;
+    public function __construct(
+        protected StudentsService $studentService
+    ) {
+        
     }
-
-    // POST /api/student/save
-    public function save(Request $request)
-    {
-        $data = $this->studentService->SaveStudent($request);
+    public function save(Request $request){
+        $data = $this->studentService->SaveStudent($request->all());
         return response()->json($data, 201);
     }
 
-    // GET /api/student/get
-    public function getData()
-    {
-        $data = Students::all();
-        return response()->json($data, 200);
+    public function getData(){
+        $data = Students::get();
+
+        return response()->json($data,200);
+
     }
 }
