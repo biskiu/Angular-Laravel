@@ -1,10 +1,24 @@
+
 POST http://127.0.0.1:8000/api/student/save
 Content-Type: application/json
 
 {
-  "student_name": "rsha",
-  "contact_no": "123"
+  "student_name": "frnc",
+  "contact_no": "123235"
 }
+
 ###
 GET http://127.0.0.1:8000/api/student/get
-# GET http://127.0.0.1:8000/student/get
+
+###
+PUT http://127.0.0.1:8000/api/student/update
+Content-Type: application/json
+
+{
+  "id": "3",
+  "student_name": "gsl",
+  "contact_no": "999999"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/student/delete/3
