@@ -3,40 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\StudentsService;
-use App\Models\Students;
+use App\Services\TeachersService;
+use App\Models\Teachers;
 
-class StudentsController extends Controller
+class TeachersController extends Controller
 {
     public function __construct(
-        protected StudentsService $studentService
+        protected TeachersService $teacherService
     ) {
     }
 
     public function save(Request $request){
-        $data = $this->studentService->saveStudent($request->all());
+        $data = $this->teacherService->saveTeacher($request->all());
         return response()->json($data, 201);
     }
 
     public function getData(){
-        $data = Students::get();
+        $data = Teachers::get();
         return response()->json($data,200);
     }
 
 
 //update,delete
     public function update(Request $request){
-        $data = Students::find($request->id);
+        $data = Teachers::find($request->id);
         if(is_null($data)){
-            return response() ->json(['message' => 'Studenet not found ehe', 404]);
+            return response() ->json(['message' => 'techer not found ehe', 404]);
         }
         
-        $this->studentService->updateStudent($data,$request->all());
+        $this->teacherService->updateTeacher($data,$request->all());
         return response()->json($data,200);
     }
 
     public function delete($id){
-        $data = $this->studentService->deleteStudent($id);
+        $data = $this->teacherService->deleteTeacher($id);
         return response()->json($data,200);
     }
 

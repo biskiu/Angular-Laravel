@@ -1,10 +1,10 @@
-
+//STUDENT
 POST http://127.0.0.1:8000/api/student/save
 Content-Type: application/json
 
 {
-  "student_name": "frnc",
-  "contact_no": "123235"
+  "student_name": "qwerty",
+  "contact_no": "234234"
 }
 
 ###
@@ -15,10 +15,71 @@ PUT http://127.0.0.1:8000/api/student/update
 Content-Type: application/json
 
 {
-  "id": "3",
+  "id": "8",
   "student_name": "gsl",
-  "contact_no": "999999"
+  "contact_no": "22222222"
 }
 
 ###
 DELETE http://127.0.0.1:8000/api/student/delete/3
+
+
+
+
+
+
+//TEACHER
+###
+POST http://127.0.0.1:8000/api/teacher/save
+Content-Type: application/json
+
+{
+  "teacher_name": "teacher",
+  "contact_no": "2313"
+}
+
+###
+GET http://127.0.0.1:8000/api/teacher/get
+
+###
+PUT http://127.0.0.1:8000/api/teacher/update
+Content-Type: application/json
+
+{
+  "id": "8",
+  "teacher_name": "gsl",
+  "contact_no": "22222222"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/teacher/delete/3
+
+
+
+
+
+//SUBJECT
+###
+POST http://127.0.0.1:8000/api/subject/save
+Content-Type: application/json
+
+{
+  "subject_name": "english",
+  "teacher_name": "23121"
+}
+
+###
+GET http://127.0.0.1:8000/api/subject/get
+
+###
+PUT http://127.0.0.1:8000/api/subject/update
+Content-Type: application/json
+
+{
+  "id": "1",
+  "subject_name": "math",
+  "teacher_name": "11"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/subject/delete/1
