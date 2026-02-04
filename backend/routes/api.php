@@ -21,12 +21,6 @@ Route::controller(TeachersController::class)->group(function () {
   Route::delete('/teacher/delete/{id}', 'delete');
 });
 
-Route::controller(TeachersController::class)->group(function () {
-  Route::post('/teacher/save', 'save');
-  Route::get('/teacher/get', 'getData');
-  Route::put('/teacher/update', 'update');
-  Route::delete('/teacher/delete/{id}', 'delete');
-});
 
 Route::controller(SubjectsController::class)->group(function () {
   Route::post('/subject/save', 'save');
