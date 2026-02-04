@@ -1,11 +1,13 @@
-<form class="example-form">
+
   <mat-form-field class="example-full-width">
     <mat-label>Favorite food</mat-label>
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="food" name = "food">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-</form>
+<div *ngFor="let s of students">
+  {{s.student_name}}
+</div>
+
+<div *ngFor="let t of teachers">
+  {{t.teacher_name}}
+</div>
