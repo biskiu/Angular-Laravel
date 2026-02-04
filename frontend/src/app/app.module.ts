@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { TeachersComponent } from './component/teachers/teachers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
     HomeComponent,
     StudentsComponent,
     SubjectsComponent,
-    GradesComponent
+    GradesComponent,
+    TeachersComponent
   ],
   imports: [
     BrowserModule,

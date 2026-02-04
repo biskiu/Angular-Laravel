@@ -34,8 +34,8 @@ POST http://127.0.0.1:8000/api/teacher/save
 Content-Type: application/json
 
 {
-  "teacher_name": "teacher",
-  "contact_no": "2313"
+  "teacher_name": "plr",
+  "contact_no": "5224423"
 }
 
 ###
@@ -46,9 +46,9 @@ PUT http://127.0.0.1:8000/api/teacher/update
 Content-Type: application/json
 
 {
-  "id": "8",
-  "teacher_name": "gsl",
-  "contact_no": "22222222"
+  "id": "1",
+  "teacher_name": "ms. plr",
+  "contact_no": "42632"
 }
 
 ###
